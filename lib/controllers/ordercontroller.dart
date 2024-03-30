@@ -15,6 +15,11 @@ final getDeliveredOrdersProvider=StreamProvider((ref){
   return orders;
 
 });
+final getAcceptedOrdersProvider=StreamProvider((ref){
+  final orders=ref.watch(orderControllerProvider.notifier).getAcceptedOrders();
+  return orders;
+
+});
 final getCancelledOrdersProvider=StreamProvider((ref){
   final orders=ref.watch(orderControllerProvider.notifier).getCancelledOrders();
   return orders;
@@ -38,6 +43,9 @@ Stream<List<Orders>>getDeliveredOrders(){
   }
   Stream<List<Orders>>getCancelledOrders(){
     return _orderService.getCancelledOrders();
+  }
+  Stream<List<Orders>>getAcceptedOrders(){
+    return _orderService.getAcceptedOrders();
   }
   Future<void>updateOrder(Orders order,String field,bool value)async{
    return _orderService.updateOrder(order, field, value);

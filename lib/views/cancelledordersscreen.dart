@@ -4,6 +4,7 @@ import 'package:ecommerceadmin/widgets/errortext.dart';
 import 'package:ecommerceadmin/widgets/loader.dart';
 import 'package:ecommerceadmin/widgets/order_item_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
@@ -26,7 +27,8 @@ class CancelledOrdersScreen extends ConsumerWidget {
                 child: Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: Column(mainAxisAlignment: MainAxisAlignment.start,children: [
-                    const SizedBox(height: 10,),
+                    ExpansionTile(title: Column(children: [
+                      const SizedBox(height: 10,),
                      Padding(
                        padding: const EdgeInsets.all(8.0),
                        child: Row(
@@ -34,8 +36,10 @@ class CancelledOrdersScreen extends ConsumerWidget {
                          children: [
                           const Text("Order Number:",
                               style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w400),),
-                           Text(order.orderId.toString(),
-                              style:const TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500,),),
+                           Expanded(
+                             child: Text(order.orderId.toString(),
+                                style:const TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500,),),
+                           ),
                          ],
                        ),
                      ),
@@ -88,7 +92,13 @@ class CancelledOrdersScreen extends ConsumerWidget {
                              )
                     ],),
                   ),
-                  Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())
+
+                    ],),
+                    children: [
+                   Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())
+                    ],)
+                    
+               
                 
                   ],)
                   ,

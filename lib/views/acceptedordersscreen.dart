@@ -4,15 +4,16 @@ import 'package:ecommerceadmin/widgets/errortext.dart';
 import 'package:ecommerceadmin/widgets/loader.dart';
 import 'package:ecommerceadmin/widgets/order_item_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
-class AllOrdersScreen extends ConsumerWidget {
-  const AllOrdersScreen({super.key});
+class AcceptedOrdersScreen extends ConsumerWidget {
+  const AcceptedOrdersScreen({super.key});
 
   @override
   Widget build(BuildContext context,WidgetRef ref) {
-    final orders=ref.watch(getOrdersProvider);
+     final orders=ref.watch(getAcceptedOrdersProvider);
     return  orders.when(data: (data){
       return Scaffold(
      
@@ -27,7 +28,8 @@ class AllOrdersScreen extends ConsumerWidget {
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: Column(mainAxisAlignment: MainAxisAlignment.start,children: [
                     ExpansionTile(title: Column(children: [
-Padding(
+ const SizedBox(height: 10,),
+                     Padding(
                        padding: const EdgeInsets.all(8.0),
                        child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,10 +93,11 @@ Padding(
                     ],),
                   ),
                     ],),
-                    children: [      Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())],),
-                 
-                     
-            
+                    children: [
+                     Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())
+                    ],)
+                   
+                
                 
                   ],)
                   ,

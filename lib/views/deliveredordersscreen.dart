@@ -27,15 +27,18 @@ class DeliveredOrdersScreen extends ConsumerWidget {
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: Column(mainAxisAlignment: MainAxisAlignment.start,children: [
                     const SizedBox(height: 10,),
-                     Padding(
+                    ExpansionTile(title: Column(children: [
+Padding(
                        padding: const EdgeInsets.all(8.0),
                        child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                          children: [
                           const Text("Order Number:",
                               style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w400),),
-                           Text(order.orderId.toString(),
-                              style:const TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500,),),
+                           Expanded(
+                             child: Text(order.orderId.toString(),
+                                style:const TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500,),),
+                           ),
                          ],
                        ),
                      ),
@@ -88,7 +91,11 @@ class DeliveredOrdersScreen extends ConsumerWidget {
                              )
                     ],),
                   ),
-                  Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())
+                    ],),
+                    children: [ Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())],
+                    ),
+                     
+                 
                 
                   ],)
                   ,
