@@ -17,7 +17,33 @@ class OrderService{
 
   Stream<List<Orders>>getOrders(){
 
-    return _orders.where("isAccepted",isEqualTo: false).where("isDelivered",isEqualTo: false).snapshots().map((event) {
+    return _orders.where("isCancelled",isEqualTo: false).where("isDelivered",isEqualTo: false).snapshots().map((event) {
+      List<Orders>orders=[];
+
+      for (var doc in event.docs){
+        orders.add(Orders.fromJson(doc.data()as Map<String,dynamic>));
+      }
+      return orders;
+    });
+    
+    
+  }
+  Stream<List<Orders>>getDeliveredOrders(){
+
+    return _orders.where("isDelivered",isEqualTo: true).where("isCancelled",isEqualTo: false).snapshots().map((event) {
+      List<Orders>orders=[];
+
+      for (var doc in event.docs){
+        orders.add(Orders.fromJson(doc.data()as Map<String,dynamic>));
+      }
+      return orders;
+    });
+    
+    
+  }
+   Stream<List<Orders>>getCancelledOrders(){
+
+    return _orders.where("isCancelled",isEqualTo: true).snapshots().map((event) {
       List<Orders>orders=[];
 
       for (var doc in event.docs){

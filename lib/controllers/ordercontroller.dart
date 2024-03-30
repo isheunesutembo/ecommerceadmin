@@ -10,6 +10,17 @@ final getOrdersProvider=StreamProvider((ref){
   return orders;
 
 });
+final getDeliveredOrdersProvider=StreamProvider((ref){
+  final orders=ref.watch(orderControllerProvider.notifier).getDeliveredOrders();
+  return orders;
+
+});
+final getCancelledOrdersProvider=StreamProvider((ref){
+  final orders=ref.watch(orderControllerProvider.notifier).getCancelledOrders();
+  return orders;
+
+});
+
 
 
 class OrderController extends StateNotifier<bool>{
@@ -21,6 +32,12 @@ class OrderController extends StateNotifier<bool>{
 
   Stream<List<Orders>>getOrders(){
     return _orderService.getOrders();
+  }
+Stream<List<Orders>>getDeliveredOrders(){
+    return _orderService.getDeliveredOrders();
+  }
+  Stream<List<Orders>>getCancelledOrders(){
+    return _orderService.getCancelledOrders();
   }
   Future<void>updateOrder(Orders order,String field,bool value)async{
    return _orderService.updateOrder(order, field, value);
