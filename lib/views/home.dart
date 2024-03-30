@@ -26,18 +26,8 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-          const  Center(
-                child: Text(
-              "Your Revenue",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
-            )),
-               Padding(
-                 padding: const EdgeInsets.all(8.0),
-                 child: RevenueChartWidget(),
-               )
+         
+              
           ],
         ),
       )),

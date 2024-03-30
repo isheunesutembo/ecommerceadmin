@@ -1,3 +1,4 @@
+import 'package:ecommerceadmin/views/ordersscreen.dart';
 import 'package:ecommerceadmin/views/productspage.dart';
 import 'package:flutter/material.dart';
 
@@ -93,23 +94,28 @@ class HomeDashBoardWidget extends StatelessWidget {
               ),
               Hero(
                 tag: 'orders',
-                child: Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "assets/icons/order-delivery.png",
-                        height: 100,
-                        width: 100,
-                        fit: BoxFit.cover,
-                      ),
-                   const   Text(
-                        "Orders",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderScreenPage()));
+                  },
+                  child: Card(
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/icons/order-delivery.png",
+                          height: 100,
+                          width: 100,
+                          fit: BoxFit.cover,
+                        ),
+                     const   Text(
+                          "Orders",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
