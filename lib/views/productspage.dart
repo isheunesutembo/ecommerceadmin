@@ -158,7 +158,7 @@ class ProductsPage extends ConsumerWidget {
                                             fontWeight: FontWeight.w600),
                                       ),
                                       Text(
-                                        "\$${data[index].oldPrice}",
+                                        "\$${data[index].oldprice}",
                                         style: const TextStyle(
                                             fontSize: 18,
                                             color: Colors.blue,

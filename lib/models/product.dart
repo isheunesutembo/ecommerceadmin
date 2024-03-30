@@ -13,7 +13,7 @@ abstract class Product with _$Product{
   String? name,
   String? description,
   double? price,
-  double? oldPrice,
+  double? oldprice,
   bool? isAvailable,
   String? categoryname,
   String? companyname,

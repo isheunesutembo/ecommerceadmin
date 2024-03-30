@@ -61,7 +61,7 @@ class ProductController extends StateNotifier<bool> {
           name: name,
           description: description,
           price: price,
-          oldPrice: oldprice,
+          oldprice: oldprice,
           categoryname: categoryname);
       final res = await _productService.addProduct(product);
       state = false;
@@ -94,7 +94,7 @@ class ProductController extends StateNotifier<bool> {
     imageRes.fold((l) => ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text("Product updated successfully"))), (r) async {
       final product =Product(productId: productId,image:r.toString(),
-          name: name,description: description,price: price,oldPrice: oldprice );
+          name: name,description: description,price: price,oldprice: oldprice );
       final res=await _productService.updateProduct(product);
       state=false;
       res.fold((l) => ScaffoldMessenger.of(context).showSnackBar(

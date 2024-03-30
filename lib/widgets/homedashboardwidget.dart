@@ -21,20 +21,45 @@ class HomeDashBoardWidget extends StatelessWidget {
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductsPage()));
                 },
+                child: Hero(
+                  tag: 'products',
+                  child: Card(
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/icons/products.png",
+                          height: 100,
+                          width: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      const  SizedBox(
+                          height: 10,
+                        ),
+                    const    Text(
+                          "Products",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Hero(
+                tag: 'payments',
                 child: Card(
                   child: Column(
                     children: [
                       Image.asset(
-                        "assets/icons/products.png",
+                        "assets/icons/payments.png",
                         height: 100,
                         width: 100,
                         fit: BoxFit.cover,
                       ),
-                    const  SizedBox(
-                        height: 10,
-                      ),
-                  const    Text(
-                        "Products",
+                    const  Text(
+                        "Payments",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -44,61 +69,48 @@ class HomeDashBoardWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "assets/icons/payments.png",
-                      height: 100,
-                      width: 100,
-                      fit: BoxFit.cover,
-                    ),
-                  const  Text(
-                      "Payments",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+              Hero(
+                tag: 'analytics',
+                child: Card(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/icons/monitor.png",
+                        height: 100,
+                        width: 100,
+                        fit: BoxFit.cover,
+                      ),
+                   const   Text(
+                        "Analytics",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "assets/icons/monitor.png",
-                      height: 100,
-                      width: 100,
-                      fit: BoxFit.cover,
-                    ),
-                 const   Text(
-                      "Analytics",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "assets/icons/order-delivery.png",
-                      height: 100,
-                      width: 100,
-                      fit: BoxFit.cover,
-                    ),
-                 const   Text(
-                      "Orders",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+              Hero(
+                tag: 'orders',
+                child: Card(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/icons/order-delivery.png",
+                        height: 100,
+                        width: 100,
+                        fit: BoxFit.cover,
+                      ),
+                   const   Text(
+                        "Orders",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               ),
             

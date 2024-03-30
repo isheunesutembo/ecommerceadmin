@@ -25,7 +25,7 @@ mixin _$Product {
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   double? get price => throw _privateConstructorUsedError;
-  double? get oldPrice => throw _privateConstructorUsedError;
+  double? get oldprice => throw _privateConstructorUsedError;
   bool? get isAvailable => throw _privateConstructorUsedError;
   String? get categoryname => throw _privateConstructorUsedError;
   String? get companyname => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $ProductCopyWith<$Res> {
       String? name,
       String? description,
       double? price,
-      double? oldPrice,
+      double? oldprice,
       bool? isAvailable,
       String? categoryname,
       String? companyname,
@@ -78,7 +78,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? name = freezed,
     Object? description = freezed,
     Object? price = freezed,
-    Object? oldPrice = freezed,
+    Object? oldprice = freezed,
     Object? isAvailable = freezed,
     Object? categoryname = freezed,
     Object? companyname = freezed,
@@ -108,9 +108,9 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double?,
-      oldPrice: freezed == oldPrice
-          ? _value.oldPrice
-          : oldPrice // ignore: cast_nullable_to_non_nullable
+      oldprice: freezed == oldprice
+          ? _value.oldprice
+          : oldprice // ignore: cast_nullable_to_non_nullable
               as double?,
       isAvailable: freezed == isAvailable
           ? _value.isAvailable
@@ -157,7 +157,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       String? name,
       String? description,
       double? price,
-      double? oldPrice,
+      double? oldprice,
       bool? isAvailable,
       String? categoryname,
       String? companyname,
@@ -182,7 +182,7 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? name = freezed,
     Object? description = freezed,
     Object? price = freezed,
-    Object? oldPrice = freezed,
+    Object? oldprice = freezed,
     Object? isAvailable = freezed,
     Object? categoryname = freezed,
     Object? companyname = freezed,
@@ -212,9 +212,9 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double?,
-      oldPrice: freezed == oldPrice
-          ? _value.oldPrice
-          : oldPrice // ignore: cast_nullable_to_non_nullable
+      oldprice: freezed == oldprice
+          ? _value.oldprice
+          : oldprice // ignore: cast_nullable_to_non_nullable
               as double?,
       isAvailable: freezed == isAvailable
           ? _value.isAvailable
@@ -257,7 +257,7 @@ class _$_Product implements _Product {
       this.name,
       this.description,
       this.price,
-      this.oldPrice,
+      this.oldprice,
       this.isAvailable,
       this.categoryname,
       this.companyname,
@@ -280,7 +280,7 @@ class _$_Product implements _Product {
   @override
   final double? price;
   @override
-  final double? oldPrice;
+  final double? oldprice;
   @override
   final bool? isAvailable;
   @override
@@ -298,7 +298,7 @@ class _$_Product implements _Product {
 
   @override
   String toString() {
-    return 'Product(productId: $productId, image: $image, name: $name, description: $description, price: $price, oldPrice: $oldPrice, isAvailable: $isAvailable, categoryname: $categoryname, companyname: $companyname, companyaddress: $companyaddress, city: $city, user_id: $user_id, phonenumber: $phonenumber)';
+    return 'Product(productId: $productId, image: $image, name: $name, description: $description, price: $price, oldprice: $oldprice, isAvailable: $isAvailable, categoryname: $categoryname, companyname: $companyname, companyaddress: $companyaddress, city: $city, user_id: $user_id, phonenumber: $phonenumber)';
   }
 
   @override
@@ -313,8 +313,8 @@ class _$_Product implements _Product {
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.oldPrice, oldPrice) ||
-                other.oldPrice == oldPrice) &&
+            (identical(other.oldprice, oldprice) ||
+                other.oldprice == oldprice) &&
             (identical(other.isAvailable, isAvailable) ||
                 other.isAvailable == isAvailable) &&
             (identical(other.categoryname, categoryname) ||
@@ -338,7 +338,7 @@ class _$_Product implements _Product {
       name,
       description,
       price,
-      oldPrice,
+      oldprice,
       isAvailable,
       categoryname,
       companyname,
@@ -368,7 +368,7 @@ abstract class _Product implements Product {
       final String? name,
       final String? description,
       final double? price,
-      final double? oldPrice,
+      final double? oldprice,
       final bool? isAvailable,
       final String? categoryname,
       final String? companyname,
@@ -390,7 +390,7 @@ abstract class _Product implements Product {
   @override
   double? get price;
   @override
-  double? get oldPrice;
+  double? get oldprice;
   @override
   bool? get isAvailable;
   @override

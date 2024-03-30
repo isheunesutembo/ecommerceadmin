@@ -21,8 +21,6 @@ Store _$StoreFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Store {
   String get uid => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get password => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get address => throw _privateConstructorUsedError;
@@ -40,8 +38,6 @@ abstract class $StoreCopyWith<$Res> {
   @useResult
   $Res call(
       {String uid,
-      String? email,
-      String? password,
       String? image,
       String? name,
       String? address,
@@ -62,8 +58,6 @@ class _$StoreCopyWithImpl<$Res, $Val extends Store>
   @override
   $Res call({
     Object? uid = null,
-    Object? email = freezed,
-    Object? password = freezed,
     Object? image = freezed,
     Object? name = freezed,
     Object? address = freezed,
@@ -74,14 +68,6 @@ class _$StoreCopyWithImpl<$Res, $Val extends Store>
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -110,8 +96,6 @@ abstract class _$$_StoreCopyWith<$Res> implements $StoreCopyWith<$Res> {
   @useResult
   $Res call(
       {String uid,
-      String? email,
-      String? password,
       String? image,
       String? name,
       String? address,
@@ -128,8 +112,6 @@ class __$$_StoreCopyWithImpl<$Res> extends _$StoreCopyWithImpl<$Res, _$_Store>
   @override
   $Res call({
     Object? uid = null,
-    Object? email = freezed,
-    Object? password = freezed,
     Object? image = freezed,
     Object? name = freezed,
     Object? address = freezed,
@@ -140,14 +122,6 @@ class __$$_StoreCopyWithImpl<$Res> extends _$StoreCopyWithImpl<$Res, _$_Store>
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -173,8 +147,6 @@ class __$$_StoreCopyWithImpl<$Res> extends _$StoreCopyWithImpl<$Res, _$_Store>
 class _$_Store implements _Store {
   _$_Store(
       {required this.uid,
-      this.email,
-      this.password,
       this.image,
       this.name,
       this.address,
@@ -186,10 +158,6 @@ class _$_Store implements _Store {
   @override
   final String uid;
   @override
-  final String? email;
-  @override
-  final String? password;
-  @override
   final String? image;
   @override
   final String? name;
@@ -200,7 +168,7 @@ class _$_Store implements _Store {
 
   @override
   String toString() {
-    return 'Store(uid: $uid, email: $email, password: $password, image: $image, name: $name, address: $address, phoneNumber: $phoneNumber)';
+    return 'Store(uid: $uid, image: $image, name: $name, address: $address, phoneNumber: $phoneNumber)';
   }
 
   @override
@@ -209,9 +177,6 @@ class _$_Store implements _Store {
         (other.runtimeType == runtimeType &&
             other is _$_Store &&
             (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.address, address) || other.address == address) &&
@@ -221,8 +186,8 @@ class _$_Store implements _Store {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, uid, email, password, image, name, address, phoneNumber);
+  int get hashCode =>
+      Object.hash(runtimeType, uid, image, name, address, phoneNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -241,8 +206,6 @@ class _$_Store implements _Store {
 abstract class _Store implements Store {
   factory _Store(
       {required final String uid,
-      final String? email,
-      final String? password,
       final String? image,
       final String? name,
       final String? address,
@@ -252,10 +215,6 @@ abstract class _Store implements Store {
 
   @override
   String get uid;
-  @override
-  String? get email;
-  @override
-  String? get password;
   @override
   String? get image;
   @override

@@ -6,8 +6,6 @@ part 'store.g.dart';
 abstract class Store with _$Store{
   factory Store({
     required String uid,
-    String? email,
-    String?password,
     String? image,
     String? name,
     String? address,

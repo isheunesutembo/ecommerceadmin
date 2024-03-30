@@ -1,65 +1,45 @@
 {
   "project_info": {
-    "project_number": "790674254449",
-    "project_id": "epharmacy-d2da2",
-    "storage_bucket": "epharmacy-d2da2.appspot.com"
+    "project_number": "150558134205",
+    "project_id": "ephamarcyapp",
+    "storage_bucket": "ephamarcyapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:790674254449:android:082bd4a8a2a626341a09d0",
+        "mobilesdk_app_id": "1:150558134205:android:5290434ed94b3e629b8cd4",
         "android_client_info": {
           "package_name": "com.example.ecommerceadmin"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "790674254449-0rt2sas223hs3jqop6t3393nhonh4m07.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB7M40Iyi_T6uCKXJfvaZZemuIct2Tqspo"
+          "current_key": "AIzaSyCe6V1EA4PESCG0otQW-CePwXd4-gv5SOY"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "790674254449-0rt2sas223hs3jqop6t3393nhonh4m07.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:790674254449:android:7f1e4c1293cdeee91a09d0",
+        "mobilesdk_app_id": "1:150558134205:android:ea1d789c546d305f9b8cd4",
         "android_client_info": {
-          "package_name": "com.example.ephamarcyapp"
+          "package_name": "com.example.ephamarcy"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "790674254449-0rt2sas223hs3jqop6t3393nhonh4m07.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB7M40Iyi_T6uCKXJfvaZZemuIct2Tqspo"
+          "current_key": "AIzaSyCe6V1EA4PESCG0otQW-CePwXd4-gv5SOY"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "790674254449-0rt2sas223hs3jqop6t3393nhonh4m07.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

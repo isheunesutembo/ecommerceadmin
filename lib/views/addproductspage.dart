@@ -14,6 +14,7 @@ List<String> categoriesList = <String>[
   'painkillers',
   'arvs',
   'sanitarypads',
+  'snacks'
   'other'
 ];
 

@@ -2,8 +2,6 @@ import 'package:ecommerceadmin/controllers/authcontroller.dart';
 import 'package:ecommerceadmin/firebase_options.dart';
 import 'package:ecommerceadmin/models/store.dart';
 import 'package:ecommerceadmin/router.dart';
-import 'package:ecommerceadmin/views/home.dart';
-import 'package:ecommerceadmin/views/loginpage.dart';
 import 'package:ecommerceadmin/widgets/errortext.dart';
 import 'package:ecommerceadmin/widgets/loader.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,13 +12,15 @@ import 'package:routemaster/routemaster.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp();
   runApp( ProviderScope(child: MyApp()));
 }
 
 class MyApp extends ConsumerWidget {
    MyApp({super.key});
 Store? storeModel;
+ 
+  
 void getData(WidgetRef ref,User data)async{
   storeModel=await ref.watch(authControllerProvider.notifier)
   .getStoreData(data.uid)

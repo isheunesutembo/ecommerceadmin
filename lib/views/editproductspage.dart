@@ -177,7 +177,7 @@ class _EditProductPageState extends ConsumerState<EditProductPage> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: TextFormField(
-                        initialValue: product.oldPrice.toString(),
+                        initialValue: product.oldprice.toString(),
                         enableSuggestions: true,
                         keyboardType: TextInputType.number,
                         onChanged: (value) {
