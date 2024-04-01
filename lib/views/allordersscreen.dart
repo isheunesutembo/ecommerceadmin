@@ -67,8 +67,8 @@ Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
                       SizedBox(
-                        height: 50,
-                        width: 150,
+                        height: 30,
+                        width: 120,
                         child:data[index].isAccepted==false  ? ElevatedButton(onPressed: ()async{
                             ref.read(orderControllerProvider.notifier)
                                 .updateOrder(data[index], "isAccepted", true).then((value) => showSnackBar(context,"order status changed to accepted"));
@@ -80,8 +80,8 @@ Padding(
                         },style: ElevatedButton.styleFrom(backgroundColor: Colors.black), child:  const Text("Delivered",style: TextStyle(color: Colors.white),)),
                       ),
                              SizedBox(
-                              height: 50,
-                              width: 150,
+                              height: 30,
+                              width: 120,
                                child: ElevatedButton(onPressed: ()async{
                                 ref.read(orderControllerProvider.notifier)
                                 .updateOrder(data[index], "isCancelled", true).then((value) => showSnackBar(context,"order status changed to cancelled"));

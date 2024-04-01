@@ -22,10 +22,10 @@ class OrderScreenPage extends ConsumerWidget {
       appBar: AppBar(
         elevation: 0,
         bottom:const TabBar(tabs: [
-          Text("All Orders",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w500),),
-          Text("Accepted Orders",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w500),),
-          Text("Delivered",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w500),),
-          Text("Cancelled",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w500),),
+          Text("Pending Orders",style: TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+          Text("Accepted Orders",style: TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+          Text("Delivered",style: TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+          Text("Cancelled",style: TextStyle(color: Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
         ]),
       ),
       body:const TabBarView(children: [

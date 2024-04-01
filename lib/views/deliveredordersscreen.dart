@@ -1,5 +1,4 @@
 import 'package:ecommerceadmin/controllers/ordercontroller.dart';
-import 'package:ecommerceadmin/utils/utils.dart';
 import 'package:ecommerceadmin/widgets/errortext.dart';
 import 'package:ecommerceadmin/widgets/loader.dart';
 import 'package:ecommerceadmin/widgets/order_item_widget.dart';
@@ -64,33 +63,7 @@ Padding(
                                 style:const TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w500),),
                     ],),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-                      SizedBox(
-                        height: 50,
-                        width: 150,
-                        child:data[index].isAccepted==false  ? ElevatedButton(onPressed: ()async{
-                            ref.read(orderControllerProvider.notifier)
-                                .updateOrder(data[index], "isAccepted", true).then((value) => showSnackBar(context,"order status changed to accepted"));
-                        
-                        },style: ElevatedButton.styleFrom(backgroundColor: Colors.black), child:  const Text("Accept",style: TextStyle(color: Colors.white),)):ElevatedButton(onPressed: ()async{
-                            ref.read(orderControllerProvider.notifier)
-                                .updateOrder(data[index], "isDelivered", true).then((value) => showSnackBar(context,"order status changed to delivered"));
-                        
-                        },style: ElevatedButton.styleFrom(backgroundColor: Colors.black), child:  const Text("Delivered",style: TextStyle(color: Colors.white),)),
-                      ),
-                             SizedBox(
-                              height: 50,
-                              width: 150,
-                               child: ElevatedButton(onPressed: ()async{
-                                ref.read(orderControllerProvider.notifier)
-                                .updateOrder(data[index], "isCancelled", true).then((value) => showSnackBar(context,"order status changed to cancelled"));
-                               
-                                                   },style: ElevatedButton.styleFrom(backgroundColor: Colors.black), child:const  Text("Cancel",style: TextStyle(color: Colors.white))),
-                             )
-                    ],),
-                  ),
+                 
                     ],),
                     children: [ Column(children: data[index].products.map((order) =>OrderItemWidget(item: order) ).toList())],
                     ),

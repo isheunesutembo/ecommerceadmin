@@ -216,7 +216,7 @@ class _EditProductPageState extends ConsumerState<EditProductPage> {
                           child: const Text(
                             "Update Product",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           )),

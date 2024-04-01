@@ -1,6 +1,8 @@
 import 'package:ecommerceadmin/views/ordersscreen.dart';
+import 'package:ecommerceadmin/views/paymentsscreen.dart';
 import 'package:ecommerceadmin/views/productspage.dart';
 import 'package:flutter/material.dart';
+
 
 class HomeDashBoardWidget extends StatelessWidget {
   const HomeDashBoardWidget({super.key});
@@ -46,22 +48,27 @@ class HomeDashBoardWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Hero(
+             Hero(
                   tag: 'payments',
-                  child: Card(
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                       
-                       Text(
-                          "Payments",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const PaymentsScreen()));
+                    },
+                    child:const Card(
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                         
+                         Text(
+                            "Payments",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
