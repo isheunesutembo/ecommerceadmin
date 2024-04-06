@@ -9,5 +9,6 @@
   
 </ol>
 
+<img src="ecommerceadmin.png"/>
 
 
